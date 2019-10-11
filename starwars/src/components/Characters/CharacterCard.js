@@ -1,26 +1,42 @@
 import React from 'react';
 import {
-    Card, CardImg, CardText, CardBody, CardLink,
+    Card, CardText, CardBody,
     CardTitle, CardSubtitle
 } from 'reactstrap';
-// import styled from "styled-components";
+import styled from "styled-components";
+
+const Cards = styled.div`
+
+display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 20px 1rem;
+width: 25%;
+height: auto;
+margin-left: auto;
+margin-right: auto;
+color: lightgrey;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+`;
 
 const CharacterCard = (props) => {
     return (
         <div>
-            <Card>
-                <CardBody>
-                    <CardTitle>{props.char.name}</CardTitle>
-                    <CardSubtitle>{props.char.homeworld}</CardSubtitle>
-                </CardBody>
-                <CardImg></CardImg>
-                <img width="100%" src="/assets/starwars.webp" alt="Star Wars" />
-                <CardBody>
-                    <CardText>{props.char.films}</CardText>
-                    <CardLink href="#">API Link</CardLink>
-                    <CardLink href="#">Another Link</CardLink>
-                </CardBody>
-            </Card>
+            <Cards>
+                <Card color="warning">
+                    <CardBody>
+                        <CardTitle>{props.char.name}</CardTitle>
+                        <CardSubtitle>{props.char.birh_year}</CardSubtitle>
+                    </CardBody>
+                    <CardText>{props.char.gender}</CardText>
+                    <CardBody>
+                        <CardText>{props.char.skin_color}</CardText>
+
+                    </CardBody>
+                </Card>
+            </Cards>
         </div>
     );
 };

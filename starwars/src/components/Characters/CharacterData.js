@@ -9,7 +9,7 @@ export default function CharacterData() {
         axios
             .get(`https://swapi.co/api/people/`)
             .then((response) => {
-                console.log(response.data.results);
+                // console.log(response.data.results);
                 setPeopleData(response.data.results);
 
             })
