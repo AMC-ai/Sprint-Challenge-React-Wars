@@ -27,12 +27,12 @@ const CharacterCard = (props) => {
             <Cards>
                 <Card color="warning">
                     <CardBody>
-                        <CardTitle>{props.char.name}</CardTitle>
-                        <CardSubtitle>{props.char.birh_year}</CardSubtitle>
+                        <CardTitle>Name: {props.char.name}</CardTitle>
+                        <CardSubtitle>Birth Yr: {props.char.birh_year}</CardSubtitle>
                     </CardBody>
-                    <CardText>{props.char.gender}</CardText>
+                    <CardText>Gender: {props.char.gender}</CardText>
                     <CardBody>
-                        <CardText>{props.char.skin_color}</CardText>
+                        <CardText>Color: {props.char.skin_color}</CardText>
 
                     </CardBody>
                 </Card>
